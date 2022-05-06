@@ -16,13 +16,19 @@ Code: const myPizza = new Pizza(["chicken", "bell peppers", "cheese"], "white sa
 Expected Output: Pizza { toppings: ["chicken", "bell peppers", "cheese"], sauce: "white sauce", size: "medium"}
 
 ### Describe Pizza.price();
-Test: "It should return a Pizza Object with its total price caculated from topping sauce and size"
-Code: myPizza.price = 14;
+
+Test: It should return the quantity of toppings. 
+Code: myPizza.price();
+Expected Output: 3
+
+Test: It should return a price for the size selected 
+Code: myPizzs.price();
+Expected Output: 3, 8
+
+Test: "It should return total price caculated from topping sauce and size"
+Code: myPizza.price = 10;
 Expected Output:  myPizza
 
-Test:
-Code:
-Expected Output:
 
 Test:
 Code:
