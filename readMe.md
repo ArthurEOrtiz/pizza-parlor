@@ -23,7 +23,8 @@ Expected Output: 3
 
 Test: It should return a price for the size selected 
 Code: myPizzs.price();
-Expected Output: 3, 8
+Expected Output: 3
+                 8
 
 Test: "It should return total price caculated from topping sauce and size"
 Code: myPizza.price = 10;
