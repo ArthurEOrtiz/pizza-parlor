@@ -8,20 +8,24 @@ function Pizza (toppings, sauce, size) {
 Pizza.prototype.price = function() {
 
   if (this.size === "small") {
-    console.log(this.toppings.length + 6);
+    return this.toppings.length + 6;
+
   } else if (this.size === "medium") {
-    console.log(this.toppings.length + 7);
+    return this.toppings.length + 7;
+
   } else {
-    console.log(this.toppings.length + 8);
+    return this.toppings.length + 8;
   }
 };
 
 function Cart() {
   this.pizzas = {};
+  this.total = 0;
 }
 
 Cart.prototype.addPizza = function(pizza) {
-  this.pizzas[pizza.toppings] = pizza
+  this.pizzas[pizza.toppings] = pizza;
+  this.total += pizza.price();
 };
 
 // Everything below this line is placed here strickly for testing purposes. 

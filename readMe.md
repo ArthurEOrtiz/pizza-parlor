@@ -46,7 +46,8 @@ Expected Output: Cart {pizzas: {"cheddar, onions, bacon}, {pepperoni, cheese}};
 
 Test: "It should return a Cart with prices that are paired with the pizza."
 Code: const cart = new Cart(myPizza, mtPizza2);
-Expected Output: cart{ "myPizza", "myPizza2"}
+Expected Output: Cart {pizzas: {"cheddar, onions, bacon}, {pepperoni, cheese}, total: 18};
+
 
 
 
