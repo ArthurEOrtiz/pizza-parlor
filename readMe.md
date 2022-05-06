@@ -34,17 +34,21 @@ Expected Output:  myPizza
 
 ### Describe Cart();
 
-Test: "It should return a Cart object with the multiple pizzas."
-Code: const cart = new Cart(myPizza, myPizza2);
-Expected Output: cart{ "myPizza", "myPizza2"}
+Test: "It should return a Cart object."
+Code: const cart = new Cart();
+Expected Output: cart{}
+
+Test: "It should have a prototype that adds pizzas to the Cart object"
+Code: const cart = new Cart();
+      cart.addPizza(myPizza1);
+      cart.addPizza(myPizza2);
+Expected Output: Cart {pizzas: {"cheddar, onions, bacon}, {pepperoni, cheese}};
 
 Test: "It should return a Cart with prices that are paired with the pizza."
 Code: const cart = new Cart(myPizza, mtPizza2);
 Expected Output: cart{ "myPizza", "myPizza2"}
 
-Test:
-Code:
-Expected Output:
+
 
 Test:
 Code:
