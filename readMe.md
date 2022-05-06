@@ -1,6 +1,8 @@
 
 # Pizza Parlor
 
+## Assignment Description
+
 Create a website for a pizza company where a user can choose one or more individual toppings (cheese, pepperoni, artichoke, anchovy, etc) and a size to order a pizza and see the final cost.
 
  * Allow the user to choose toppings and size for the pizza they'd like to order.
@@ -30,6 +32,19 @@ Test: "It should return total price caculated from topping sauce and size"
 Code: myPizza.price = 10;
 Expected Output:  myPizza
 
+### Describe Cart();
+
+Test: "It should return a Cart object with the multiple pizzas."
+Code: const cart = new Cart(myPizza, myPizza2);
+Expected Output: cart{ "myPizza", "myPizza2"}
+
+Test: "It should return a Cart with prices that are paired with the pizza."
+Code: const cart = new Cart(myPizza, mtPizza2);
+Expected Output: cart{ "myPizza", "myPizza2"}
+
+Test:
+Code:
+Expected Output:
 
 Test:
 Code:
