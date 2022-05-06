@@ -6,13 +6,12 @@ function Pizza (toppings, sauce, size) {
 };
 
 Pizza.prototype.price = function() {
-  console.log(this.toppings.length);
-  
+
   if (this.size === "small") {
-    console.log(6);
+    console.log(this.toppings.length + 6);
   } else if (this.size === "medium") {
-    console.log(8);
+    console.log(this.toppings.length + 7);
   } else {
-    console.log(9);
+    console.log(this.toppings.length + 8);
   }
 };
