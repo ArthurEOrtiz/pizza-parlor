@@ -36,13 +36,12 @@ function displayCart(cartToDisplay){
 
   htmlForCart = Object.keys(cartToDisplay.pizzas).map(function(key){
     const pizza = cartToDisplay.pizzas[key]
-    return `<p>Quantity: ${pizza.quantity}</p><p>Toppings: ${pizza.toppings}</p><p>Sauce: ${pizza.sauce}</p><p>Size: ${pizza.size}</p>`;
+    return `<li><p>Quantity: ${pizza.quantity}</p><p>Toppings: ${pizza.toppings}</p><p>Sauce: ${pizza.sauce}</p><p>Size: ${pizza.size}</p><p>Price: $${pizza.price()}</li>`;
   }).join();
 
   cartItems.html(htmlForCart);
-  $("#cartItems").show();
+  $("#cart").show();
 
-  console.log(htmlForCart);
 }
 
 
@@ -66,7 +65,8 @@ $(document).ready(function(){
     cart.addPizza(myPizza);
 
     displayCart(cart);
-
+    $("#totalPrice").html(cart.total);
+    $("#total").show();
   });
   
 });

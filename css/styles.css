@@ -1,7 +1,23 @@
 .container {
+  background-color: #DEEEFA;
   display: flex;
 }
 
+form {
+  padding: 3%;
+  background-color: white;
+}
+
+#cart {
+  padding: 5%;
+  
+}
 #cartItems {
+  line-height: .5rem;;
+  width: 100%;
+}
+
+#total {
+  font-weight: bolder;
   display: none;
 }
