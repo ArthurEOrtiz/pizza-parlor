@@ -28,10 +28,15 @@ Cart.prototype.addPizza = function(pizza) {
   this.total += pizza.price();
 };
 
-// Everything below this line is placed here strickly for testing purposes. 
-const myPizza1 = new Pizza(["cheddar","onions","bacon"], "red sauce", "medium");
-const myPizza2 = new Pizza (["pepperoni", "cheese"], "red sauce", "small");
+$(document).ready(function(){
+  const cart = new Cart();
 
-const cart = new Cart();
-cart.addPizza(myPizza1);
-cart.addPizza(myPizza2);
+  $(#userInput).submit(function(event){
+    event.preventDefault();
+    
+
+  });
+
+});
+
+
