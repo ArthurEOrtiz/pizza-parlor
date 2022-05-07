@@ -8,8 +8,8 @@
   <title>Pizza Parlor</title>
 </head>
 <body>
-  <div class="container-md">
-  <h3>Make your Pizza!</h3>
+  <div class="container">
+  <h3 class="p-3">Make your Pizza!</h3>
   <br>
   <form id="userInput">
     <h4>Meats</h4>
@@ -92,11 +92,20 @@
     <label class="form-check-label" for="sauce">Large</label>
     </div>
 
-    <br>
+    <h4>Quantity</h4>
+    <div class="form-input">
+      <input class="form-input" for="quantity" type="number" name="quantity" id="quantity">
+    </div>
 
+    <br>
+    <div class="form">
     <button type="submit" class="btn btn-dark">Add to Cart</button> 
+    </div>
 
   </form>
+  </div>
+  <div id="cart" class="container">
+    
   </div>
   
 </body>

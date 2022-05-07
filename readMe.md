@@ -29,8 +29,8 @@ Expected Output: 3
                  8
 
 Test: "It should return total price caculated from topping sauce and size"
-Code: myPizza.price = 10;
-Expected Output:  myPizza
+Code: myPizza.price;
+Expected Output:  10;
 
 ### Describe Cart();
 
