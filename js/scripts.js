@@ -28,7 +28,24 @@ Cart.prototype.addPizza = function(pizza) {
   this.pizzas[pizza.toppings] = pizza;
   this.total += pizza.price();
 };
+
 //UI Logic
+function displayCart(cartToDisplay){
+  let cartItems = $("#cartItems")
+  let htmlForCart = ""
+
+  htmlForCart = Object.keys(cartToDisplay.pizzas).map(function(key){
+    const pizza = cartToDisplay.pizzas[key]
+    return `<p>Quantity: ${pizza.quantity}</p><p>Toppings: ${pizza.toppings}</p><p>Sauce: ${pizza.sauce}</p><p>Size: ${pizza.size}</p>`;
+  }).join();
+
+  cartItems.html(htmlForCart);
+  $("#cartItems").show();
+
+  console.log(htmlForCart);
+}
+
+
 
 $(document).ready(function(){
   const cart = new Cart();
@@ -44,14 +61,14 @@ $(document).ready(function(){
     const sauce = $("input:radio[name=sauce]:checked").val();
     const size = $("input:radio[name=size]:checked").val();
 
-    const myPizza = new Pizza (quantity,toppings, sauce, size);
+    const myPizza = new Pizza (quantity, toppings, sauce, size);
 
     cart.addPizza(myPizza);
-    console.log(cart);
-    
+
+    displayCart(cart);
 
   });
-
+  
 });
 
 
