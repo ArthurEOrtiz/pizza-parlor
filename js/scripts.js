@@ -27,13 +27,19 @@ Cart.prototype.addPizza = function(pizza) {
   this.pizzas[pizza.toppings] = pizza;
   this.total += pizza.price();
 };
+//UI Logic
 
 $(document).ready(function(){
   const cart = new Cart();
 
-  $(#userInput).submit(function(event){
+  $("#userInput").submit(function(event){
     event.preventDefault();
     
+    let toppings = $("input[type=checkbox]:checked").map(function(){ 
+      return this.value;
+    }).get();
+
+    console.log(toppings);
 
   });
 
