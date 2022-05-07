@@ -35,11 +35,17 @@ $(document).ready(function(){
   $("#userInput").submit(function(event){
     event.preventDefault();
     
-    let toppings = $("input[type=checkbox]:checked").map(function(){ 
+    const toppings = $("input[type=checkbox]:checked").map(function(){ 
       return this.value;
     }).get();
 
-    console.log(toppings);
+    const sauce = $("input:radio[name=sauce]:checked").val();
+    const size = $("input:radio[name=size]:checked").val();
+
+    const myPizza = new Pizza (toppings, sauce, size);
+
+    console.log(myPizza);
+    
 
   });
 
