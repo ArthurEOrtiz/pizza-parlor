@@ -1,6 +1,8 @@
 
 # Pizza Parlor
 
+## By Arthur Edward Ortiz
+
 ## Assignment Description
 
 Create a website for a pizza company where a user can choose one or more individual toppings (cheese, pepperoni, artichoke, anchovy, etc) and a size to order a pizza and see the final cost.
@@ -9,13 +11,29 @@ Create a website for a pizza company where a user can choose one or more individ
  * Create a pizza object constructor with properties for toppings and size.
  * Create a prototype method for the cost of a pizza depending on the selections chosen. Use your own formula for this.
 
+## Technologies Used
+
+* Java Script
+* Jquery
+* Bootstrap
+
+## Setup/Installtion Requirments
+
+* Clone this repository to your desktop
+* Navigate to the top level of the directory
+* Open index.html in your browser
+
+## Known Bugs
+
+ * None
+
 ## Specs
 
 ### Describe Pizza();
 
-Test: "It should return a Pizza object with properties for toppings sauce and size."
+Test: "It should return a Pizza object with properties for quantity, toppings sauce and size."
 Code: const myPizza = new Pizza(["chicken", "bell peppers", "cheese"], "white sauce", "medium");
-Expected Output: Pizza { toppings: ["chicken", "bell peppers", "cheese"], sauce: "white sauce", size: "medium"}
+Expected Output: Pizza {quantity: 1, toppings: ["chicken", "bell peppers", "cheese"], sauce: "white sauce", size: "medium"}
 
 ### Describe Pizza.price();
 
@@ -47,3 +65,8 @@ Expected Output: Cart {pizzas: {"cheddar, onions, bacon}, {pepperoni, cheese}};
 Test: "It should return a Cart with prices that are paired with the pizza."
 Code: const cart = new Cart(myPizza, mtPizza2);
 Expected Output: Cart {pizzas: {"cheddar, onions, bacon}, {pepperoni, cheese}, total: 18};
+
+## License
+
+Copyright (c) May 7, 2022 Arthur Edward Ortiz
+
